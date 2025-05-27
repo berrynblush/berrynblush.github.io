@@ -1,31 +1,95 @@
-const products = [
-  {
-    name: "Gold Necklace",
-    price: "₹12,000",
-    image: "https://via.placeholder.com/200x200?text=Necklace"
-  },
-  {
-    name: "Diamond Ring",
-    price: "₹20,000",
-    image: "https://via.placeholder.com/200x200?text=Ring"
-  },
-  {
-    name: "Pearl Earrings",
-    price: "₹7,500",
-    image: "https://via.placeholder.com/200x200?text=Earrings"
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #d27b7b;
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f7f1f1;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff0f5;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero button {
+  padding: 0.6rem 1.2rem;
+  background-color: #d27b7b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Products */
+.products, .categories, .about, .testimonials {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.product-grid, .category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-card, .category-card {
+  border: 1px solid #e3e3e3;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.product-card img, .category-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #f7f1f1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
   }
-];
-
-const productList = document.getElementById("product-list");
-
-products.forEach(product => {
-  const card = document.createElement("div");
-  card.className = "product-card";
-  card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <h3>${product.name}</h3>
-    <p>${product.price}</p>
-    <button>Add to Cart</button>
-  `;
-  productList.appendChild(card);
-});
+}
