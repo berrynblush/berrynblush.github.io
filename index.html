@@ -1,41 +1,111 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>berrynblush | Elegant Jewelry</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>berrynblush | Jewelry Store</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <div class="logo">Berrynblush</div>
+    <div class="logo">berrynblush</div>
     <nav>
-      <ul>
+      <ul id="navLinks">
         <li><a href="#">Home</a></li>
         <li><a href="#">Shop</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="#">Wishlist</a></li>
         <li><a href="#">Cart</a></li>
+        <li id="userGreeting"></li>
+        <li id="loginLink"><a href="login.html">Login</a></li>
+        <li id="logoutLink" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Discover Elegant Jewelry</h1>
-    <p>Luxury meets style – handcrafted pieces for every occasion.</p>
-    <button>Shop Now</button>
+    <h1>Discover Your Signature Shine</h1>
+    <p>Unveil timeless beauty with our handcrafted jewelry</p>
+    <button>Explore Collection</button>
   </section>
 
-  <section class="products" id="product-list">
-    <!-- Products will be added here dynamically -->
+  <!-- Featured Products -->
+  <section class="products">
+    <h2>Featured Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="your-image1.jpg" alt="Jewelry 1">
+        <h3>Gold Necklace</h3>
+        <p>$150</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="your-image2.jpg" alt="Jewelry 2">
+        <h3>Diamond Ring</h3>
+        <p>$300</p>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Add more as needed -->
+    </div>
   </section>
 
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="your-necklace-image.jpg" alt="Necklaces">
+        <p>Necklaces</p>
+      </div>
+      <div class="category-card">
+        <img src="your-earring-image.jpg" alt="Earrings">
+        <p>Earrings</p>
+      </div>
+      <div class="category-card">
+        <img src="your-ring-image.jpg" alt="Rings">
+        <p>Rings</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About berrynblush</h2>
+    <p>At berrynblush, we blend tradition and trend to create jewelry that radiates elegance and individuality. Each piece tells a story, designed to make you shine with confidence.</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      <p>"Absolutely love the quality and design! berrynblush never disappoints!" – Ayesha</p>
+    </div>
+    <div class="testimonial">
+      <p>"My go-to place for gifts. Stunning packaging and quick delivery." – Sneha</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 berrynblush. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    if (isLoggedIn && user) {
+      document.getElementById("userGreeting").innerText = "Hi, " + user.name;
+      document.getElementById("loginLink").style.display = "none";
+      document.getElementById("logoutLink").style.display = "inline";
+    }
+
+    function logout() {
+      localStorage.setItem("isLoggedIn", "false");
+      alert("Logged out successfully!");
+      window.location.reload();
+    }
+  </script>
 </body>
 </html>
