@@ -93,3 +93,35 @@ footer {
     align-items: flex-start;
   }
 }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    background-color: #f9eaea; /* light pink or any background highlight */
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .product-grid,
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
