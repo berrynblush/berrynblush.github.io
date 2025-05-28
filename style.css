@@ -113,3 +113,46 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+/* Header wrapper */
+header.navbar {
+  padding: 1rem 2rem;
+  background-color: #f7f1f1;
+}
+
+/* Container for logo and nav */
+.navbar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem; /* Space between logo and nav */
+}
+
+/* Navigation links aligned right under the logo */
+.nav-links {
+  align-self: flex-end; /* pushes nav to right */
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: #d14e4e;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #ffe4e4;
+  color: #b03030;
+}
