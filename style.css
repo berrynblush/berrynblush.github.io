@@ -93,35 +93,36 @@ footer {
     align-items: flex-start;
   }
 }
+/* Mobile Navigation Horizontal Fix */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
   nav ul {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
-    padding: 0.5rem 0;
-    background-color: #f9eaea; /* light pink or any background highlight */
+    background-color: #ffe4e4; /* Highlight color */
+    padding: 10px;
     border-radius: 10px;
-    width: 100%;
+    list-style: none;
+    margin: 0;
   }
 
   nav ul li {
     margin: 0;
   }
 
-  .hero {
-    text-align: center;
-    padding: 2rem 1rem;
+  nav ul li a {
+    color: #d14e4e;
+    font-weight: 500;
+    text-decoration: none;
   }
 
-  .product-grid,
-  .category-grid {
-    grid-template-columns: 1fr;
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 }
