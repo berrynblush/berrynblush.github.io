@@ -14,12 +14,8 @@ a {
 
 /* Header/Navbar */
 header.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
   background-color: #f7f1f1;
-  flex-wrap: wrap;
 }
 
 .logo {
