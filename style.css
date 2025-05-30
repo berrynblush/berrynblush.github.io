@@ -152,3 +152,43 @@ header.navbar {
   background-color: #ffe4e4;
   color: #b03030;
 }
+/* Fix navbar spacing and alignment */
+header.navbar {
+  background-color: #f7f1f1;
+  padding: 1rem 2rem;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Align nav to the right with controlled spacing */
+.nav-links {
+  display: flex;
+  gap: 1rem; /* reduce space between menu items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #d14e4e;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #ffe4e4;
+  color: #b03030;
+}
