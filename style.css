@@ -19,7 +19,7 @@ header.navbar {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -173,7 +173,7 @@ header.navbar {
 /* Align nav to the right with controlled spacing */
 .nav-links {
   display: flex;
-  gap: 1rem; /* reduce space between menu items */
+  gap: 0.5rem; /* reduce space between menu items */
   list-style: none;
   margin: 0;
   padding: 0;
